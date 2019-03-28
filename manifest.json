@@ -1,0 +1,38 @@
+{
+  "name": "BigPony: WebCheckout Hotfix",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "description": "add several functions to WebCheckout in order to expedite checkouts and returns",
+  "homepage_url": "http://iltim.as",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "BigPony",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "notifications",
+    "tabs",
+    "https://reservation.newschool.edu/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://reservation.newschool.edu/*"
+      ],
+      "js": [
+        "js/jquery.min.js","js/fingerprint2.min.js","src/inject/inject.js"
+      ],
+      "css":["src/inject/inject.css"]
+    }
+  ]
+}

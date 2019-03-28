@@ -1,0 +1,36 @@
+
+
+
+	.noCmdPrompt{
+		color: white;
+		font-size:26px;
+		 position: fixed;
+		 z-index: 2147483648;
+		 left:0;
+		 bottom: 0;
+		 width: auto;
+		 height: auto; 
+		 background: rgb(0,0,0,0);
+		 text-align: center;
+
+	}
+
+		.noCmdPrompt a{
+			color: blue;
+}
+	.cmdPrompt{
+		white-space: pre-line;
+		padding-top: 20px;
+		 /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2147483648; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  transition: all 0.5s ease;
+	}
