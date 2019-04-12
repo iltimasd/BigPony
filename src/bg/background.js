@@ -7,7 +7,24 @@
 
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	//chrome.pageAction.show(sender.tab.id);
-    //sendResponse();
-  });
+	function(request, sender, sendResponse) {
+
+
+		console.log(sender.tab ?
+			"from a content script:" + sender.tab.url :
+			"from the extension");
+		if (request.command == "switch")
+			chrome.windows.getLastFocused(
+				{populate: true},
+				function(window){
+					tab = window.tabs.find(x => x.url=="https://reservation.newschool.edu/wco")
+					console.log(tab)
+					if (tab == null){
+    chrome.tabs.create({url:"https://reservation.newschool.edu/wco"})
+}else{
+					chrome.tabs.update(tab.id, {selected: true});
+				}
+					
+				}
+				)
+	});

@@ -1,2 +1,1 @@
-# BigPony
-BigPony adds several functions to WebCheckout in order to expedite checkouts and returns.
+http://www.superlead.com/UpLoad/201801/66ME%200012-A-00%202200%E8%8B%B1%E6%96%87%E7%89%88%E8%AF%B4%E6%98%8E%E4%B9%A6-%E5%A3%B0%E5%98%89%E8%AA%89%E5%AE%9A%E5%88%B6.pdf
