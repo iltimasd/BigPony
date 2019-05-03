@@ -21,7 +21,7 @@ chrome.extension.sendMessage({}, function(response) {
         var readyStateCheckInterval = setInterval(function() {
             if (document.readyState === "complete") {
                 clearInterval(readyStateCheckInterval);
-                setTimeout(betaReload(), 1000);
+                //setTimeout(betaReload(), 1000);
                 $('body').append('<div class = "inject-modal"><div class= "noCmdPrompt">Press Control to enter COMMAND mode.</div></div>');
                 $(document).keydown(function(e) {
                     if (e.which == 17 && !commandState) {
